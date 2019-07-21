@@ -1,2 +1,19 @@
-$violet: #000;
-$yellow: #F9C802;
+$mainBackground: #f1f4fd;
+$yellow: #f7f052;
+$darkblue: #0e225b;
+$darkred: #790629;
+$diamondColor: #ff6663;
+$red:#db2b39;
+$mobile:360px;
+$tablet:640px;
+
+@mixin linkStyle {
+    color: $darkblue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@mixin paragraphStyle {
+    color: $darkblue;
+    line-height: 24px;
+}

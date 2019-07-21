@@ -12,37 +12,34 @@ html {
 }
 
 a:visited {
-  color: #0e225b;
+  color: $darkblue;
 }
 
 body {
-  background: #f1f4fd;
+  background: $mainBackground;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  @media (max-width: 640px) {
+  @media (max-width: $tablet) {
     font-size: 13px;
   }
 }
 
 .about {
   &__header {
-    color: #790629;
+    color: $darkred;
     font-size: 20px;
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       font-size: 16px;
     }
   }
   &__link {
-    color: #0e225b;
-    font-weight: 600;
-    text-decoration: none;
+    @include linkStyle;
   }
   &__link:hover {
-    color: #db2b39;
+    color: $red;
   }
   &__paragraph {
-    border-top: 3px dotted #db2b39;
-    color: #0e225b;
-    line-height: 24px;
+    border-top: 3px dotted $red;
+    @include paragraphStyle;
     margin: 0;
     padding: 16px;
   }
@@ -58,16 +55,13 @@ body {
   max-width: 700px;
   width: 100%;
   &__link {
-    color: #0e225b;
-    font-weight: 600;
-    text-decoration: none;
+    @include linkStyle;
     &:hover {
-      color: #db2b39;
+      color: $red;
     }
   }
   &__paragraph {
-    color: #0e225b;
-    line-height: 24px;
+    @include paragraphStyle;
     margin: 0;
     padding: 10px 16px 10px 16px;
   }
@@ -78,10 +72,10 @@ body {
     width: 100%;
   }
   &__title {
-    color: #790629;
+    color: $darkred;
     font-size: 20px;
     margin: 16px 0 16px;
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       font-size: 16px;
     }
   }
@@ -90,23 +84,23 @@ body {
 .days {
   padding: 16px;
   &:first-child {
-    background: #f7f052;
+    background: $yellow;
   }
   &:nth-child(4) {
-    background: #f7f052;
-    @media (max-width: 640px) {
+    background: $yellow;
+    @media (max-width: $tablet) {
       background: initial;
     }
   }
   &:last-child {
-    background: #f7f052;
+    background: $yellow;
   }
   &__header {
-    color: #790629;
+    color: $darkred;
     font-size: 20px;
     margin: 0 0 16px;
     &::after {
-      background: #ff6663;
+      background: $diamondColor;
       border-radius: 25%;
       content: "";
       display: inline-block;
@@ -117,7 +111,7 @@ body {
       width: 10px;
     }
     &::before {
-      background: #ff6663;
+      background: $diamondColor;
       border-radius: 25%;
       content: "";
       display: inline-block;
@@ -127,25 +121,22 @@ body {
       transform: rotate(45deg);
       width: 10px;
     }
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       font-size: 16px;
     }
   }
   &__link {
-    color: #0e225b;
-    font-weight: 600;
-    text-decoration: none;
+    @include linkStyle;
     &:hover {
-      color: #db2b39;
+      color: $red;
     }
   }
   &__paragraph {
-    color: #0e225b;
-    line-height: 24px;
+    @include paragraphStyle;
   }
-  @media (max-width: 640px) {
+  @media (max-width: $tablet) {
     &:nth-child(3) {
-      background: #f7f052;
+      background: $yellow;
     }
   }
 }
@@ -156,13 +147,13 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       grid-template-columns: 1fr;
     }
   }
   &__header {
-    color: #790629;
-    @media (max-width: 640px) {
+    color: $darkred;
+    @media (max-width: $tablet) {
       font-size: 16px;
     }
   }
@@ -187,19 +178,17 @@ body {
   padding: 16px;
   position: fixed;
   width: 100%;
-  @media (max-width: 640px) {
+  @media (max-width: $tablet) {
     padding: 0;
   }
   &__link {
-    color: #0e225b;
-    font-weight: 600;
-    text-decoration: none;
+    @include linkStyle;
     &--top {
       bottom: 15px;
       padding: 5px;
       position: fixed;
       right: 15px;
-      @media (max-width: 640px) {
+      @media (max-width: $tablet) {
         bottom: 6px;
         position: fixed;
         right: 0px;
@@ -211,31 +200,31 @@ body {
     }
   }
   &__paragraph {
-    color: #0e225b;
+    color: $darkblue;
     width: 700px;
     @media (max-width: 800px) {
       width: 600px;
     }
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       width: 500px;
     }
-    @media (max-width: 360px) {
+    @media (max-width: $mobile) {
       max-width: 280px;
     }
   }
 }
 
 .header__title {
-  color: #0e225b;
+  color: $darkblue;
   font-size: 40px;
   @media (max-width: 800px) {
     font-size: 34px;
   }
-  @media (max-width: 640px) {
+  @media (max-width: $tablet) {
     font-size: 28px;
     line-height: 40px;
   }
-  @media (max-width: 360px) {
+  @media (max-width: $mobile) {
     font-size: 16px;
     line-height: 26px;
   }
@@ -245,12 +234,12 @@ body {
   &__item {
     display: block;
     margin: 0 16px;
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       padding: 16px;
     }
   }
   &__link {
-    color: #0e225b;
+    color: $darkblue;
     text-decoration: none;
     &:hover {
       color: #fff;
@@ -261,18 +250,18 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       display: none;
     }
     &--visible {
-      @media (max-width: 640px) {
+      @media (max-width: $tablet) {
         display: flex;
       }
     }
   }
   &__switcher {
-    @media (max-width: 640px) {
+    @media (max-width: $tablet) {
       border: none;
       background: none;
       position: absolute;
@@ -293,12 +282,12 @@ body {
   @media (max-width: 800px) {
     max-width: 600px;
   }
-  @media (max-width: 640px) {
+  @media (max-width: $tablet) {
     margin: 20px auto;
     max-width: 500px;
     padding-top: 32px;
   }
-  @media (max-width: 360px) {
+  @media (max-width: $mobile) {
     margin: 20px auto;
     max-width: 280px;
   }
@@ -318,7 +307,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  @media (max-width: 640px) {
+  @media (max-width: $tablet) {
     min-height: 44px;
   }
 }
