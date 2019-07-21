@@ -10,18 +10,26 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 a:visited {
   color: #0e225b;
 }
+
 body {
   background: #f1f4fd;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
 }
 
 .about {
   &__header {
     color: #790629;
     font-size: 20px;
+    @media (max-width: 640px) {
+      font-size: 16px;
+    }
   }
   &__link {
     color: #0e225b;
@@ -73,6 +81,9 @@ body {
     color: #790629;
     font-size: 20px;
     margin: 16px 0 16px;
+    @media (max-width: 640px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -83,6 +94,9 @@ body {
   }
   &:nth-child(4) {
     background: #f7f052;
+    @media (max-width: 640px) {
+      background: initial;
+    }
   }
   &:last-child {
     background: #f7f052;
@@ -113,6 +127,9 @@ body {
       transform: rotate(45deg);
       width: 10px;
     }
+    @media (max-width: 640px) {
+      font-size: 16px;
+    }
   }
   &__link {
     color: #0e225b;
@@ -126,15 +143,29 @@ body {
     color: #0e225b;
     line-height: 24px;
   }
+  @media (max-width: 640px) {
+    &:nth-child(3) {
+      background: #f7f052;
+    }
+  }
 }
-.diary__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-}
-.diary__header {
-  color: #790629;
+
+.diary {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__header {
+    color: #790629;
+    @media (max-width: 640px) {
+      font-size: 16px;
+    }
+  }
 }
 
 .fas {
@@ -156,15 +187,24 @@ body {
   padding: 16px;
   position: fixed;
   width: 100%;
+  @media (max-width: 640px) {
+    padding: 0;
+  }
   &__link {
     color: #0e225b;
     font-weight: 600;
     text-decoration: none;
-    &__top {
+    &--top {
       bottom: 15px;
       padding: 5px;
       position: fixed;
       right: 15px;
+      @media (max-width: 640px) {
+        bottom: 6px;
+        position: fixed;
+        right: 0px;
+        padding: 5px;
+      }
     }
     &:hover {
       color: #fff;
@@ -173,16 +213,41 @@ body {
   &__paragraph {
     color: #0e225b;
     width: 700px;
+    @media (max-width: 800px) {
+      width: 600px;
+    }
+    @media (max-width: 640px) {
+      width: 500px;
+    }
+    @media (max-width: 360px) {
+      max-width: 280px;
+    }
   }
 }
+
 .header__title {
   color: #0e225b;
   font-size: 40px;
+  @media (max-width: 800px) {
+    font-size: 34px;
+  }
+  @media (max-width: 640px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  @media (max-width: 360px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
+
 .navigation {
   &__item {
     display: block;
     margin: 0 16px;
+    @media (max-width: 640px) {
+      padding: 16px;
+    }
   }
   &__link {
     color: #0e225b;
@@ -196,14 +261,49 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
+    @media (max-width: 640px) {
+      flex-direction: column;
+      display: none;
+    }
+    &--visible {
+      @media (max-width: 640px) {
+        display: flex;
+      }
+    }
+  }
+  &__switcher {
+    @media (max-width: 640px) {
+      border: none;
+      background: none;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+    }
+    @media (min-width: 641px) {
+      display: none;
+    }
   }
 }
+
 .main {
   margin: 30px auto;
   max-width: 700px;
   padding-top: 52px;
   width: 100%;
+  @media (max-width: 800px) {
+    max-width: 600px;
+  }
+  @media (max-width: 640px) {
+    margin: 20px auto;
+    max-width: 500px;
+    padding-top: 32px;
+  }
+  @media (max-width: 360px) {
+    margin: 20px auto;
+    max-width: 280px;
+  }
 }
+
 .site-header {
   background: #757f9a;
   /* fallback for old browsers */
@@ -218,114 +318,11 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-}
-span {
-  font-weight: bold;
-}
-
-@media (max-width: 800px) {
-  .footer__paragraph {
-    width: 600px;
-  }
-  .header__title {
-    font-size: 34px;
-  }
-  .main {
-    margin: 30px auto;
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 640px) {
-  body {
-    font-size: 13px;
-  }
-  .days:nth-child(3) {
-    background: #f7f052;
-  }
-  .days:nth-child(4) {
-    background: initial;
-  }
-  .days:last-child {
-    background: #f7f052;
-  }
-  .diary__grid {
-    grid-template-columns: 1fr;
-  }
-  .footer {
-    padding: 0;
-  }
-  .footer__link--top {
-    bottom: 6px;
-    position: fixed;
-    right: 0px;
-    padding: 5px;
-  }
-  .footer__paragraph {
-    width: 500px;
-  }
-  .header__title {
-    font-size: 28px;
-    line-height: 40px;
-  }
-  .about__header,
-  .diary__header,
-  .days__header,
-  .article__title {
-    font-size: 16px;
-  }
-  .main {
-    margin: 20px auto;
-    max-width: 500px;
-    padding-top: 32px;
-  }
-  .navigation__item {
-    padding: 16px;
-  }
-  .navigation__list {
-    flex-direction: column;
-    display: none;
-  }
-  .navigation__list--visible {
-    display: flex;
-  }
-  .navigation__switcher {
-    border: none;
-    background: none;
-    position: absolute;
-    right: 16px;
-    top: 16px;
-  }
-  .site-header {
+  @media (max-width: 640px) {
     min-height: 44px;
   }
 }
 
-@media (min-width: 641px) {
-  .navigation__switcher {
-    display: none;
-  }
-}
-
-@media (max-width: 360px) {
-  .footer {
-    padding: 0;
-  }
-  .footer__link--top {
-    bottom: 6px;
-    position: fixed;
-    right: 0px;
-    padding: 5px;
-  }
-  .footer__paragraph {
-    max-width: 280px;
-  }
-  .header__title {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  .main {
-    margin: 20px auto;
-    max-width: 280px;
-  }
+span {
+  font-weight: bold;
 }
