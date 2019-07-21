@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -322,7 +323,7 @@ a:visited {
 
 body {
   background: #f1f4fd;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: 'Lato', sans-serif; }
   @media (max-width: 640px) {
     body {
       font-size: 13px; } }
