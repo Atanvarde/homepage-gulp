@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Raleway:400,700&display=swap&subset=latin-ext');
 
 html {
   box-sizing: border-box;
@@ -218,6 +218,7 @@ body {
 .header__title {
   color: $darkblue;
   font-size: 40px;
+  font-family: 'Raleway', sans-serif;
   @media (max-width: 800px) {
     font-size: 34px;
   }

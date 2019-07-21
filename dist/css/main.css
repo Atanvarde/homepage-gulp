@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Raleway:400,700&display=swap&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -516,7 +516,8 @@ body {
 
 .header__title {
   color: #0e225b;
-  font-size: 40px; }
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif; }
   @media (max-width: 800px) {
     .header__title {
       font-size: 34px; } }
