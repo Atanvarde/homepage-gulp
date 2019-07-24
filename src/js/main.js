@@ -111,27 +111,27 @@ navigationSwitcher.addEventListener('click', (e) => {
 // console.log(b);
 // } while (b <9) ;
 
-// const person = {
-//   name: 'ola',
-//   surname: 'gardo'
-// }
+const person = {
+  name: 'ola',
+  surname: 'gardo'
+}
 
 // for (let property in person) {
 //   console.log(`${property}: ${person[property]}`);
 // }
 
-// console.log(person);
+console.log(person);
 
-// const jsonPerson = JSON.stringify(person);
+const jsonPerson = JSON.stringify(person);
 
-// console.log(jsonPerson);
+console.log(jsonPerson);
 
-// localStorage.setItem('person', jsonPerson);
+localStorage.setItem('person', jsonPerson);
 
-// const personStringify = localStorage.getItem('person');
+const personStringify = localStorage.getItem('person');
 
-// const newPerson = JSON.parse(personStringify);
+const newPerson = JSON.parse(personStringify);
 
-// console.log(newPerson);
+console.log(newPerson);
 
 // localStorage.removeItem('person');
