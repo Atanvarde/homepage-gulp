@@ -48,12 +48,12 @@ const navigationList = document.querySelector('.navigation__list--js');
 // console.log(navigationList);
 
 navigationSwitcher.addEventListener('click', (e) => {
-    navigationList.classList.toggle('navigation__list--visible');
-    if (navigationList.classList.contains('navigation__list--visible')) {
-        navigationSwitcher.innerHTML = '&#935;';
-    } else {
-        navigationSwitcher.innerHTML = '&#926;';
-    }
+  navigationList.classList.toggle('navigation__list--visible');
+  if (navigationList.classList.contains('navigation__list--visible')) {
+    navigationSwitcher.innerHTML = '&#935;';
+  } else {
+    navigationSwitcher.innerHTML = '&#926;';
+  }
 
 });
 
@@ -144,5 +144,5 @@ if (localStorage.getItem('focusInput')) {
 
 
 focusInput.addEventListener('keyup', (e) => {
-  localStorage.setItem('focusInput',e.target.value);
+  localStorage.setItem('focusInput', e.target.value);
 })
