@@ -323,7 +323,7 @@ a:visited {
 
 body {
   background: #f1f4fd;
-  font-family: 'Lato', sans-serif; }
+  font-family: "Lato", sans-serif; }
   @media (max-width: 640px) {
     body {
       font-size: 13px; } }
@@ -459,6 +459,9 @@ body {
 .fas {
   margin-right: 8px; }
 
+.focus {
+  margin-bottom: 16px; }
+
 .footer {
   background: #757f9a;
   /* fallback for old browsers */
@@ -517,7 +520,7 @@ body {
 .header__title {
   color: #0e225b;
   font-size: 40px;
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Raleway", sans-serif; }
   @media (max-width: 800px) {
     .header__title {
       font-size: 34px; } }

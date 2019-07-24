@@ -135,3 +135,14 @@ const newPerson = JSON.parse(personStringify);
 console.log(newPerson);
 
 // localStorage.removeItem('person');
+
+const focusInput = document.querySelector('.focus--js');
+
+if (localStorage.getItem('focusInput')) {
+  focusInput.value = localStorage.getItem('focusInput');
+}
+
+
+focusInput.addEventListener('keyup', (e) => {
+  localStorage.setItem('focusInput',e.target.value);
+})

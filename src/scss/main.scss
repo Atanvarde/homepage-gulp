@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Raleway:400,700&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Raleway:400,700&display=swap&subset=latin-ext");
 
 html {
   box-sizing: border-box;
@@ -18,7 +18,7 @@ a:visited {
 
 body {
   background: $mainBackground;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   @media (max-width: $tablet) {
     font-size: 13px;
   }
@@ -164,6 +164,10 @@ body {
   margin-right: 8px;
 }
 
+.focus {
+  margin-bottom: 16px;
+}
+
 .footer {
   background: #757f9a;
   /* fallback for old browsers */
@@ -218,7 +222,7 @@ body {
 .header__title {
   color: $darkblue;
   font-size: 40px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   @media (max-width: 800px) {
     font-size: 34px;
   }
@@ -313,5 +317,3 @@ body {
     min-height: 44px;
   }
 }
-
-
