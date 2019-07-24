@@ -1,3 +1,5 @@
+"use strict";
+
 const person = {
     name: 'ola',
     surname: 'gardo'
