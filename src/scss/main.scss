@@ -85,16 +85,16 @@ body {
 .days {
   padding: 16px;
   &:first-child {
-    background: $yellow;
+    background: $lightviolet;
   }
   &:nth-child(4) {
-    background: $yellow;
+    background: $lightviolet;
     @media (max-width: $tablet) {
       background: initial;
     }
   }
   &:last-child {
-    background: $yellow;
+    background: $lightviolet;
   }
   &__header {
     color: $darkred;
@@ -137,7 +137,7 @@ body {
   }
   @media (max-width: $tablet) {
     &:nth-child(3) {
-      background: $yellow;
+      background: $lightviolet;
     }
   }
 }
