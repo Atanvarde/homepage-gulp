@@ -22,5 +22,5 @@ Aby uruchomić moją stronę lokalnie wykonaj poniższe kroki:
 
 `gulp`
 
-To publish your page using github pages use `npm run deploy`
+Aby opublikować stronę z użyciem github pages wpisz polecenie `npm run deploy`.
 
