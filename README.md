@@ -1,4 +1,4 @@
-![Homepage screenshot](github/gh.png)
+![Homepage screenshot](github/homepagemin.png)
 # Mój homepage
 
 Zapraszam na moją stronę [Strona domowa Aleksandry Gardo](https://atanvarde.github.io/homepage-gulp)
